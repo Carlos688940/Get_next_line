@@ -1,0 +1,11 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "Live Preview",
+			"workspacePath": "/Users/carlos688/Desktop/Get_next_line",
+			"problemMatcher": [],
+			"label": "Live Preview: Run Server"
+		}
+	]
+}

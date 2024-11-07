@@ -1,1 +1,2 @@
-ola ola ola!
+This is a sample text file.
+End of file.
