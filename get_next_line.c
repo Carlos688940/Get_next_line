@@ -6,7 +6,7 @@
 /*   By: carlaugu <carlaugu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:57:48 by carlaugu          #+#    #+#             */
-/*   Updated: 2024/11/07 23:26:03 by carlaugu         ###   ########.fr       */
+/*   Updated: 2024/11/07 23:33:54 by carlaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,33 +103,6 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-#include <stdio.h>
-#include <fcntl.h>
-#include <unistd.h>
-
-char *get_next_line(int fd);
-
-int main()
-{
-    int fd;
-    char *line;
-
-    fd = open("test.txt", O_RDONLY);
-    if (fd == -1)
-    {
-        printf("Error opening file\n");
-        return 1;
-    }
-
-    while ((line = get_next_line(fd)) != NULL)
-    {
-        printf("%s", line);
-        free(line);
-    }
-
-    close(fd);
-    return 0;
-}
 // #include <fcntl.h>
 // #include <stdlib.h>
 // #include <stdio.h>
