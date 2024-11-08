@@ -6,7 +6,7 @@
 /*   By: carlaugu <carlaugu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:57:48 by carlaugu          #+#    #+#             */
-/*   Updated: 2024/11/07 23:33:54 by carlaugu         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:20:46 by carlaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,11 +112,9 @@ char	*get_next_line(int fd)
 // 	char	*s;
 
 // 	fd = 1;
-// 	fd = open("test.txt", O_RDONLY);
+// 	fd = open("teste.txt", O_RDONLY);
 // 	s = get_next_line(fd);
 // 	printf("%s", s);
-// 	s = get_next_line(fd);
-// 	printf("%s", s);
-// 	s = get_next_line(fd);
-// 	printf("%s", s);
+// 	free(s);
+	
 // }

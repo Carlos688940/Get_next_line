@@ -6,7 +6,7 @@
 /*   By: carlaugu <carlaugu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:57:55 by carlaugu          #+#    #+#             */
-/*   Updated: 2024/11/07 23:32:30 by carlaugu         ###   ########.fr       */
+/*   Updated: 2024/11/08 11:35:49 by carlaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,34 +58,28 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-// char	*ft_clean_save(char *save, char *read)
-// {
-// 	size_t	i;
-// 	size_t	j;
-// 	size_t	new_save_len;
-// 	char	*new_save;
+char	*ft_clean_save(char *save, char *read)
+{
+	size_t	i;
+	size_t	j;
+	size_t	new_save_len;
+	char	*new_save;
 
-// 	i = 0;
-// 	while (save[i] && save[i] != '\n')
-// 		i++;
-// 	if (!save[i])
-// 		return (NULL);
-// 	new_save_len = (ft_strlen(save) - i) - 1;
-// 	new_save = ft_calloc(new_save_len + 1, sizeof(char));
-// 	if (!new_save)
-// 		return (ft_clean_all(read, save));
-// 	j = 0;
-// 	while (save[i])
-// 	{
-// 		if (save[i] == '\n')
-// 			i++;
-// 		new_save[j++] = save[i];
-// 		i++;
-// 	}
-// 	new_save[j] = '\0';
-// 	free (save);
-// 	return (new_save);
-// }
+	i = 0;
+	while (save[i] && save[i] != '\n')
+		i++;
+	if (!save[i])
+		return (NULL);
+	new_save_len = (ft_strlen(save) - i) - 1;
+	new_save = ft_calloc(new_save_len + 1, sizeof(char));
+	if (!new_save)
+		return (ft_clean_all(read, save));
+	j = 0;
+	while (save[i])
+		new_save[j++] = save[++i];
+	free (save);
+	return (new_save);
+}
 
 char	*ft_clean_all(char *read_buf, char *save_buf)
 {
