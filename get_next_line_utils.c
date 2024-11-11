@@ -6,7 +6,7 @@
 /*   By: carlaugu <carlaugu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:57:55 by carlaugu          #+#    #+#             */
-/*   Updated: 2024/11/09 15:16:18 by carlaugu         ###   ########.fr       */
+/*   Updated: 2024/11/11 11:42:53 by carlaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void	*ft_calloc(size_t n, size_t size)
 {
 	char	*ptr;
-	int		len;
-	int		i;
+	size_t		len;
+	size_t		i;
 
 	len = n * size;
 	ptr = malloc(len);
