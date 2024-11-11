@@ -41,6 +41,7 @@ int	main(int argc, char **argv)
 		while (line)
 		{
 			printf(GREEN"Line %d:"RESET"%s", i, line);
+			free(line);
 			i++;
 			line = get_next_line(fd);
 		}

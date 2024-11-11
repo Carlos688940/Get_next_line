@@ -6,7 +6,7 @@
 /*   By: carlaugu <carlaugu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:57:51 by carlaugu          #+#    #+#             */
-/*   Updated: 2024/11/11 20:55:41 by carlaugu         ###   ########.fr       */
+/*   Updated: 2024/11/11 21:46:48 by carlaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 #  define BUFFER_SIZE 3
 
 # endif
+
+# include <stdio.h>
 
 # include <stdlib.h>
 # include <fcntl.h>

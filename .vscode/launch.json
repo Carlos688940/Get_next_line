@@ -8,8 +8,8 @@
 			"type": "lldb",
 			"request": "launch",
 			"name": "Debug",
-			"program": "${workspaceFolder}/a.out",
-			"args": [],
+			"program": "${workspaceFolder}/Get_nex_line_Tests/teste",
+			"args": ["empty.txt"],
 			"cwd": "${workspaceFolder}"
 		}
 	]
