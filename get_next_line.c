@@ -6,7 +6,7 @@
 /*   By: carlaugu <carlaugu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:57:48 by carlaugu          #+#    #+#             */
-/*   Updated: 2024/11/09 16:44:23 by carlaugu         ###   ########.fr       */
+/*   Updated: 2024/11/11 20:20:38 by carlaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 char	*ft_create_save(char *read, char *save)
 {
 	char	*ptr;
-	int		len;
-	int		i;
-	int		j;
+	size_t		len;
+	size_t		i;
+	size_t		j;
 
 	if (!*read)
 		return (save);
@@ -42,8 +42,8 @@ char	*ft_create_save(char *read, char *save)
 
 char	*ft_create_line(char *read, char *save)
 {
-	int		len;
-	int		i;
+	size_t		len;
+	size_t		i;
 	char	*line;
 
 	len = 0;
@@ -78,7 +78,7 @@ char	*get_next_line(int fd)
 	static char	*to_save;
 	char		*to_read;
 	char		*line;
-	int			count;
+	ssize_t			count;
 
 	to_read = ft_first_check(fd);
 	if (!to_read)
