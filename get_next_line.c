@@ -6,7 +6,7 @@
 /*   By: carlaugu <carlaugu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:57:48 by carlaugu          #+#    #+#             */
-/*   Updated: 2024/11/11 22:01:52 by carlaugu         ###   ########.fr       */
+/*   Updated: 2024/11/12 13:48:17 by carlaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char	*ft_create_line(char *read, char *save)
 	len += (save[len] == '\n');
 	line = ft_calloc(len + 1, sizeof(char));
 	if (!line)
-		return (ft_clean_all(read, save));
+		return (ft_clean_all(&read, &save));
 	i = 0;
 	while (i < len)
 	{
@@ -75,7 +75,7 @@ char	*ft_first_check(int fd)
 
 char	*get_next_line(int fd)
 {
-	static char	*to_save;
+	static char	*to_save = NULL;
 	char		*to_read;
 	char		*line;
 	ssize_t			count;
@@ -88,16 +88,17 @@ char	*get_next_line(int fd)
 	{
 		count = read(fd, to_read, BUFFER_SIZE);
 		if (count < 0)
-			return (ft_clean_all(to_read, to_save));
+			return (ft_clean_all(&to_read, &to_save));
 		to_read[count] = '\0';
 		to_save = ft_create_save(to_read, to_save);
 		if (!to_save)
-			return (ft_clean_all(to_read, to_save));
+			return (ft_clean_all(&to_read, &to_save));
 	}
 	line = ft_create_line(to_read, to_save);
 	if (!line)
 		return (NULL);
 	to_save = ft_clean_save(to_read, to_save);
-	free(to_read);
+	if (to_save)
+		free(to_read);
 	return (line);
 }

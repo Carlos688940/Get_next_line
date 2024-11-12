@@ -15,11 +15,11 @@ int	main(int argc, char **argv)
 	int	k;
 	char	*line;
 
-	if (argc < 4)
-	{
-		printf ("Error!\nYou have to give a file name to read the content!");
-		return (1);
-	}
+	// if (argc < 4)
+	// {
+	// 	printf ("Error!\nYou have to give a file name to read the content!");
+	// 	return (1);
+	// }
 	j = 1;
 	k = 1;
 	while (j < argc)

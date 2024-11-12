@@ -1,5 +1,5 @@
 CC = cc
-CFLAGS = -g -Wall -Wextra -Werror -D BUFFER_SIZE=2
+CFLAGS = -g -Wall -Wextra -Werror -D BUFFER_SIZE=5
 NAME = teste
 
 RM = rm -f
@@ -11,9 +11,10 @@ all: ${NAME}
 teste:
 	${CC} ${CFLAGS} test.c ../get_next_line.c ../get_next_line_utils.c -o teste
 ##----------- No mac -------------------
-	leaks --atExit -- ./teste empty.txt test.txt big.txt 
+#leaks --atExit -- ./teste empty.txt test.txt big.txt 
 ##----------- na escola ----------------
-#valgrind ./teste big.txt empty.txt test.txt
+	valgrind --leak-check=full ./teste multiple_nlx5.txt 
+#big.txt empty.txt test.txt
 clean:
 	${RM} ${NAME}
 

@@ -1,16 +1,28 @@
 {
-	// Use IntelliSense to learn about possible attributes.
-	// Hover to view descriptions of existing attributes.
-	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-	"version": "0.2.0",
 	"configurations": [
-		{
-			"type": "lldb",
-			"request": "launch",
-			"name": "Debug",
-			"program": "${workspaceFolder}/Get_nex_line_Tests/teste",
-			"args": ["empty.txt"],
-			"cwd": "${workspaceFolder}"
-		}
+	{
+		"name": "(gdb) Launch",
+		"type": "cppdbg",
+		"request": "launch",
+		"program": "/home/carlaugu/42-Carlos/42Common_Core/Get_next_line/Get_nex_line_Tests/teste",
+		"args": ["/home/carlaugu/42-Carlos/42Common_Core/Get_next_line/Get_nex_line_Tests/multiple_nlx5.txt"],
+		"stopAtEntry": false,
+		"cwd": "${fileDirname}",
+		"environment": [],
+		"externalConsole": false,
+		"MIMode": "gdb",
+		"setupCommands": [
+		    {
+			"description": "Enable pretty-printing for gdb",
+			"text": "-enable-pretty-printing",
+			"ignoreFailures": true
+		    },
+		    {
+			"description": "Set Disassembly Flavor to Intel",
+			"text": "-gdb-set disassembly-flavor intel",
+			"ignoreFailures": true
+		    }
+		]
+	}
 	]
 }
