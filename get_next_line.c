@@ -6,7 +6,7 @@
 /*   By: carlaugu <carlaugu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:57:48 by carlaugu          #+#    #+#             */
-/*   Updated: 2024/11/12 13:48:17 by carlaugu         ###   ########.fr       */
+/*   Updated: 2024/11/12 14:28:41 by carlaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,6 @@ char	*get_next_line(int fd)
 	if (!line)
 		return (NULL);
 	to_save = ft_clean_save(to_read, to_save);
-	if (to_save)
-		free(to_read);
+	free(to_read);
 	return (line);
 }
