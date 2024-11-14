@@ -6,21 +6,11 @@
 /*   By: carlaugu <carlaugu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:57:48 by carlaugu          #+#    #+#             */
-/*   Updated: 2024/11/13 00:59:48 by carlaugu         ###   ########.fr       */
+/*   Updated: 2024/11/14 00:19:03 by carlaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
-char	*ft_first_check(int fd)
-{
-	char	*read;
-
-	if (fd < 0 || BUFFER_SIZE <= 0)
-		return (NULL);
-	read = ft_calloc(BUFFER_SIZE + 1, sizeof(char));
-	return (read);
-}
 
 char	*get_next_line(int fd)
 {
@@ -49,6 +39,16 @@ char	*get_next_line(int fd)
 	to_save = ft_clean_save(to_save);
 	free (to_read);
 	return (line);
+}
+
+char	*ft_first_check(int fd)
+{
+	char	*read;
+
+	if (fd < 0 || BUFFER_SIZE <= 0)
+		return (NULL);
+	read = ft_calloc(BUFFER_SIZE + 1, sizeof(char));
+	return (read);
 }
 
 char	*ft_create_save(char *read, char *save)

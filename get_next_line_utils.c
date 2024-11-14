@@ -6,7 +6,7 @@
 /*   By: carlaugu <carlaugu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:57:55 by carlaugu          #+#    #+#             */
-/*   Updated: 2024/11/13 11:43:35 by carlaugu         ###   ########.fr       */
+/*   Updated: 2024/11/14 00:26:59 by carlaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,15 +59,4 @@ char	*ft_clean_all(char **read, char **save)
 	*read = NULL;
 	*save = NULL;
 	return (NULL);
-}
-
-int	ft_is_newline(char *read)
-{
-	while (*read)
-	{
-		if (*read == '\n')
-			return (1);
-		read++;
-	}
-	return (0);
 }
