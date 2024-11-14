@@ -1,39 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carlaugu <carlaugu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 15:57:55 by carlaugu          #+#    #+#             */
-/*   Updated: 2024/11/13 11:43:35 by carlaugu         ###   ########.fr       */
+/*   Created: 2024/11/13 20:31:35 by carlaugu          #+#    #+#             */
+/*   Updated: 2024/11/13 20:32:06 by carlaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-
-int	ft_newline(char *read)
-{
-	while (*read)
-	{
-		if (*read == '\n')
-			return (1);
-		read++;
-	}
-	return (0);
-}
-
-int	ft_strlen(char *s)
-{
-	int	i;
-
-	if (!s)
-		return (0);
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
+#include "get_next_line_bonus.h"
 
 void	*ft_calloc(size_t n, size_t size)
 {
@@ -51,6 +28,17 @@ void	*ft_calloc(size_t n, size_t size)
 	return (buf);
 }
 
+int	ft_newline(char *read)
+{
+	while (*read)
+	{
+		if (*read == '\n')
+			return (1);
+		read++;
+	}
+	return (0);
+}
+
 char	*ft_clean_all(char **read, char **save)
 {
 	if (*save)
@@ -61,13 +49,42 @@ char	*ft_clean_all(char **read, char **save)
 	return (NULL);
 }
 
-int	ft_is_newline(char *read)
+int	ft_strlen(char *s)
 {
-	while (*read)
+	int	i;
+
+	if (!s)
+		return (0);
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
+
+char	*ft_clean_save(char *save)
+{
+	int		i;
+	int		j;
+	int		len;
+	char	*new_save;
+
+	i = 0;
+	while (save[i] && save[i] != '\n')
+		i++;
+	len = ft_strlen(save) - i;
+	new_save = ft_calloc(len + (len == 0), sizeof(char));
+	if (!new_save)
 	{
-		if (*read == '\n')
-			return (1);
-		read++;
+		free (save);
+		return (NULL);
 	}
-	return (0);
+	j = 0;
+	if (save[i] == '\n')
+	{
+		while (save[++i])
+			new_save[j++] = save[i];
+		new_save[j] = '\0';
+	}
+	free (save);
+	return (new_save);
 }

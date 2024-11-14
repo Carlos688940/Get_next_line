@@ -6,7 +6,7 @@
 /*   By: carlaugu <carlaugu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:57:51 by carlaugu          #+#    #+#             */
-/*   Updated: 2024/11/12 23:07:27 by carlaugu         ###   ########.fr       */
+/*   Updated: 2024/11/13 20:41:41 by carlaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 # endif
 
 # include <stdio.h>
-
 # include <stdlib.h>
 # include <fcntl.h>
 # include <unistd.h>
