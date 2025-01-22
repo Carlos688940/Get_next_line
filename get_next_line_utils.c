@@ -6,7 +6,7 @@
 /*   By: carlaugu <carlaugu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:57:55 by carlaugu          #+#    #+#             */
-/*   Updated: 2024/11/14 00:26:59 by carlaugu         ###   ########.fr       */
+/*   Updated: 2025/01/22 11:44:58 by carlaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_newline(char *read)
 	return (0);
 }
 
-int	ft_strlen(char *s)
+int	ft_strlen_gnl(char *s)
 {
 	int	i;
 

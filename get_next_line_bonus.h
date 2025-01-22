@@ -6,7 +6,7 @@
 /*   By: carlaugu <carlaugu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 12:09:55 by carlaugu          #+#    #+#             */
-/*   Updated: 2024/11/14 00:25:24 by carlaugu         ###   ########.fr       */
+/*   Updated: 2025/01/22 11:56:20 by carlaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_BONUS_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 200
+#  define BUFFER_SIZE 500
 
 # endif
 
@@ -31,6 +31,6 @@ char	*ft_clean_save(char *save);
 char	*ft_first_check(int fd);
 void	*ft_calloc(size_t n, size_t size);
 int		ft_newline(char *read);
-int		ft_strlen(char *s);
+int		ft_strlen_gnl(char *s);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: carlaugu <carlaugu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 11:26:06 by carlaugu          #+#    #+#             */
-/*   Updated: 2024/11/14 00:19:43 by carlaugu         ###   ########.fr       */
+/*   Updated: 2025/01/22 11:45:29 by carlaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ char	*ft_create_save(char *read, char *save)
 
 	if (!*read)
 		return (save);
-	len = ft_strlen(read) + ft_strlen(save);
+	len = ft_strlen_gnl(read) + ft_strlen_gnl(save);
 	save_buf = ft_calloc(len + 1, sizeof(char));
 	if (!save_buf)
 		return (NULL);
