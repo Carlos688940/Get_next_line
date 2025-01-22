@@ -15,6 +15,9 @@ $(NAME): $(OBJS)
 	@$(AR) $(NAME) $(OBJS)
 	@echo "$(GREEN) GNL library created!$(RESET)"
 
+%.o: %.c
+	@${CC} ${CFLAGS} -c $< -o $@
+
 clean:
 	${RM} ${OBJS} ${OBJS_BON}
 	@echo "$(GREEN)GNL objects cleaned!$(RESET)"
