@@ -20,11 +20,9 @@ $(NAME): $(OBJS)
 
 clean:
 	${RM} ${OBJS} ${OBJS_BON}
-	@echo "$(GREEN)GNL objects cleaned!$(RESET)"
 
 fclean: clean
 	${RM} ${NAME}
-	@echo "$(GREEN)Everything gnl cleaned!$(RESET)"
 
 re: fclean all
 
